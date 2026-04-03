@@ -3,5 +3,6 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
+  <Project Path="Computer_Graphics/Computer_Graphics.vcxproj" Id="820ea120-296f-462c-a846-bd44d2fff162" />
   <Project Path="drawSquare/drawSquare.vcxproj" Id="87a7ab9f-4368-4374-85b5-dd38fc3365b4" />
 </Solution>
