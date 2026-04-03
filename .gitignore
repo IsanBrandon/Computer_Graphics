@@ -1,0 +1,17 @@
+.vs/
+Debug/
+Release/
+x64/
+x86/
+*.exe
+*.dll
+*.obj
+*.pdb
+*.ilk
+*.ipch
+*.log
+*.tlog
+*.lastbuildstate
+*.suo
+*.user
+packages/

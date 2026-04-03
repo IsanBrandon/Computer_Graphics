@@ -1,2 +1,3 @@
-# Computer_Graphics
-2026년 1학기 PKNU 컴퓨터그래픽스
+# Computer Graphics Study
+
+This repository contains my assignments and practice code for the Computer Graphics course using OpenGL.
