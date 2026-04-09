@@ -9,7 +9,7 @@ void MyDisplay() {
     glLoadIdentity();                                   // CTM = I 
     glColor3f(1.0, 0.3, 0.3);                           // 색 1번 설정
     glutWireSphere(0.2, 20, 16);  						// 구 그리기 (1st)
-    glPushMatrix(); 
+    glPushMatrix();
     glRotatef((GLfloat)Day, 0.0, 1.0, 0.0);		        // CTM = I * Ry(Day)	
     glTranslatef(0.7, 0.0, 0.0);					        // CTM = I * Ry(Day) * T(0.7, 0.0, 0.0)
     glRotatef((GLfloat)Time, 0.0, 1.0, 0.0);		        // CTM = I * Ry(Day) * T(0.7, 0.0, 0.0) * Ry(Time)	
