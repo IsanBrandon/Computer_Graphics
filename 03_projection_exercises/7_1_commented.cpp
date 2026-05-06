@@ -52,6 +52,7 @@ void MyDisplay() {
 // 1) 왼쪽 아래 뷰포트: 정면도(front view)
 // --------------------------------------------------
 	glViewport(0, 0, Width / 2, Height / 2); // 윈도우의 왼쪽 아래 1/4 영역을 뷰포트로 설정
+	// glViewport(x, y, width, height) 원도우의 어느 부분에 그림을 그릴지 정하는 함수 
 
 	glMatrixMode(GL_MODELVIEW);              // 모델뷰 행렬을 다루겠다고 명시
 	glPushMatrix();                          // 현재 모델뷰 행렬 저장
@@ -62,6 +63,10 @@ void MyDisplay() {
 	gluLookAt(0.0, 0.0, 1.0,                 // 카메라 위치: z축 +1 지점
 		0.0, 0.0, 0.0,                 // 바라보는 대상: 원점
 		0.0, 1.0, 0.0);                // 위쪽 방향: y축 +방향
+	// gluLookAt(ex, ey, ez,   cx, cy, cz,   ux, uy, uz); 
+	// (ex,ey,ez): 카메라 위치 (cx,cy,cz): 보는 대상 (ux,uy,uz): 위쪽 방향 
+
+
 	DrawScene();                             // 해당 카메라 시점으로 장면 그리기
 	glPopMatrix();                           // 행렬 복원
 

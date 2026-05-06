@@ -2,7 +2,12 @@
 
 void mydisplay() {
 	glClear(GL_COLOR_BUFFER_BIT);		// 화면 clear (glClear ~ glFlush)
-	glutWireTorus(0.1, 0.3, 20, 100);
+	glBegin(GL_POLYGON);				// 그래픽 Object를 선언	(glBegin ~ glEnd)
+		glVertex3f(-0.5, -0.5, 0.0);		// 점 지정 (z는 0평면 위에 존재)
+		glVertex3f(0.5, -0.5, 0.0);			// 점 지정
+		glVertex3f(0.5, 0.5, 0.0);			// 점 지정
+		glVertex3f(-0.5, 0.5, 0.0);		// 해당 줄을 지우는 경우 삼각형이 됨
+	glEnd();							// 그래픽 Object 내용 마무리
 	glFlush();							// 버퍼에 있는 내용을 그리도록 함 
 }
 
