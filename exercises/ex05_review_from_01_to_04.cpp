@@ -3,8 +3,6 @@
 #define _WINDOW_HEIGHT 300
 #define _WINDOW_WIDTH 300
 
-GLfloat r = 1.0, g = 1.0, b = 1.0;
-
 void reshape(int width, int height) {
 	glViewport(0, 0, width, height);
 	GLfloat f_w = (GLfloat)width / (GLfloat)_WINDOW_WIDTH;
@@ -22,15 +20,6 @@ void display() {
 	glFlush(); 
 }
 
-void mouseBtn(int btn, int states, int x, int y) {
-	if (btn == GLUT_LEFT_BUTTON && states == GLUT_UP) {
-		g = (g - 0.1) < 0 ? 0 : (g - 0.1);
-		b = (b - 0.1) < 0 ? 0 : (b - 0.1);
-		glColor3f(r, g, b);
-	}
-
-}
-
 int main(int argc, char** argv) {
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_RGB);
@@ -38,7 +27,6 @@ int main(int argc, char** argv) {
 	glutInitWindowSize(_WINDOW_WIDTH, _WINDOW_HEIGHT);
 	glutDisplayFunc(display);
 	glutReshapeFunc(reshape);
-	glutMouseFunc(mouseBtn);
 
 	glutMainLoop();
 
